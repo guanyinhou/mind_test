@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper cover" v-if="questionIdx === 0">
+            <div class="content">
+                <h1>
+                    {{ titleCn }}
+                    <span>{{ titleEn }}</span>
+                </h1>
+                <div class="text-content">
+                    {{ result.description }}
+                    <button class="btn-begin" @click="questionIdx+=1">開始測驗 <i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper test-form" v-else-if="questionIdx > 0 && questionIdx < 11"
+            v-for="(question, idx) in questions" :key="question.id">
+            <div v-if="questionIdx === idx + 1" class="quest-zone">
+                <button class="btn-back" type="button" @click="questionIdx-=1">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <div class="question">
+                    <span class="big-q">Q{{ idx + 1 }}</span>
+                    <p>{{ question.problem }}</p>
+                    <span class="copyright">
+                        {{ titleCn }}<br />
+                        <span class="eng">{{ titleEn }}</span>
+                    </span>
+                </div>
+            </div>
+            <div v-if="questionIdx === idx + 1" class="select-zone">
+                <button class="btn-next" type="button" @click="nextPage(question.id)" v-if="idx < 9">
+                    下一題 <i class="fa fa-arrow-right"></i>
+                </button>
+                <button class="btn-next" type="button" @click="getResult(question.id)" v-else>
+                    計算結果 <i class="fa fa-arrow-right"></i>
+                </button>
+                <div class="answers">
+                    <div class="ans">
+                        <span v-for="option in question.options" :key="option.category">
+                            <input type="radio" :id="option.fraction" :name="question.id" :value="option.fraction"
+                                v-model="questionList[Math.floor(idx/2)].point[idx%2]">
+                            <label :for="option.fraction">
+                                <span>{{ option.description }}</span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper final" v-else v-for="result in resultList" :key="result.category">
+            <div class="result-top">
+                <div class="final-header">
+                    <div class="title">
+                        {{ titleCn }}
+                        <span class="subtitle">{{ titleEn }}</span>
+                    </div>
+                    <ul class="result-list">
+                        <li>
+                            <a href="#" class="active" v-for="i in 5" :key="i">
+                                {{ result.name }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="result-content">
+                    <div class="result-title">
+                        {{ result.name }}
+                        <span class="sub-title">{{ result.category }}</span>
+                    </div>
+                    <div class="result-defined">
+                        {{ result.description }}
+                    </div>
+                </div>
+            </div>
+            <div class="result-bottom">
+                <div class="explain">
+                    <div class="explain-title">{{ result.degree }}</div>
+                    <div class="explain-content">{{ result.explain }}</div>
+                </div>
+                <div class="btn-zone">
+                    <!-- <button class="btn">下一個：外向性<i class="fa fa-arrow-right"></i></button> -->
+                    <button class="btn last" @click="reset">重新測驗<i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

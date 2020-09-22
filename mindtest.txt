@@ -1,0 +1,29 @@
+ICON
+
+MATERIAL DESIGN ICONS
+https://material.io/tools/icons/?style=baseline
+
+
+FONT
+
+PT SANS
+https://fonts.google.com/specimen/PT+Sans
+
+NOTO SANS TC
+https://fonts.google.com/specimen/Noto+Sans+TC
+
+
+IMAGE
+
+UNSPLASH
+https://images.unsplash.com/photo-1530274484058-c2b32e70c9ba?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2130&q=80
+
+https://images.unsplash.com/photo-1464639351491-a172c2aa2911?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2134&q=80
+
+https://images.unsplash.com/photo-1515462277126-2dd0c162007a?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2135&q=80
+
+https://images.unsplash.com/photo-1517241034903-9a4c3ab12f00?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1950&q=80
+
+https://images.unsplash.com/photo-1513569771920-c9e1d31714af?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2134&q=80
+
+https://images.unsplash.com/photo-1591541924200-d1217b346bf6?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1950&q=80
