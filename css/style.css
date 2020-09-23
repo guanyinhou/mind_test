@@ -549,12 +549,6 @@
   }
 }
 
-@media (max-width: 479.98px) {
-  #app .final .result-top {
-    height: 40%;
-  }
-}
-
 #app .final .result-top .final-header .title {
   display: inline-block;
   margin-top: 24px;
@@ -769,7 +763,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .result-content .result-title {
-    font-size: 30px;
+    font-size: 26px;
     line-height: 40px;
     margin-top: 10px;
   }
@@ -921,7 +915,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .explain .explain-content {
-    height: 240px;
+    height: 200px;
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 16px;
