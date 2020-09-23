@@ -10,7 +10,8 @@ const app = new Vue({
         questionList: [],
         questions: [],
         resultList: [],
-        cateEng: []
+        cateEng: [],
+        isDisabled: true
     },
     methods: {
         getData() {
@@ -47,11 +48,16 @@ const app = new Vue({
                     console.log(err);
                 })
         },
-        nextPage(id) {
+        isDisabledFn() {
+            this.isDisabled = false;
+        },
+        nextPage() {
             this.questionIdx += 1;
+            this.isDisabled = true;
             // if(questionList.index===)
         },
-        getResult(id) {
+        getResult() {
+            this.isDisabled = true;
             this.questionList.forEach(item=>{
                 this.questionIdx = 11;
                 // people.reduce(function(accumulator, currentValue, currentIndex, array)
@@ -67,7 +73,7 @@ const app = new Vue({
                             total: numTotal,
                             degree: "低",
                             category: item.index,
-                            descriiption: item.desc.desc,
+                            description: item.desc.desc,
                             explain: item.desc.low,
                             name: item.name
                         })
@@ -77,17 +83,22 @@ const app = new Vue({
                             total: numTotal,
                             degree: "中",
                             category: item.index,
-                            descriiption: item.desc.desc,
+                            description: item.desc.desc,
                             explain: item.desc.middle,
+                            explain1: item.desc.high,
+                            explain2: item.desc.low,
                             name: item.name
                         })
                         break;
                     case 7:
+                    case 8:
+                    case 9:
+                    case 10:
                         this.resultList.push({
                             total: numTotal,
                             degree: "高",
                             category: item.index,
-                            descriiption: item.desc.desc,
+                            description: item.desc.desc,
                             explain: item.desc.high,
                             name: item.name
                         })

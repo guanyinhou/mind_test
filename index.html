@@ -42,17 +42,17 @@
                 </div>
             </div>
             <div v-if="questionIdx === idx + 1" class="select-zone">
-                <button class="btn-next" type="button" @click="nextPage(question.id)" v-if="idx < 9">
+                <button class="btn-next" type="button" @click="nextPage(question.id)" v-if="idx < 9" :disabled="isDisabled">
                     下一題 <i class="fa fa-arrow-right"></i>
                 </button>
-                <button class="btn-next" type="button" @click="getResult(question.id)" v-else>
+                <button class="btn-next" type="button" @click="getResult(question.id)" v-else :disabled="isDisabled">
                     計算結果 <i class="fa fa-arrow-right"></i>
                 </button>
                 <div class="answers">
                     <div class="ans">
                         <span v-for="option in question.options" :key="option.category">
                             <input type="radio" :id="option.fraction" :name="question.id" :value="option.fraction"
-                                v-model="questionList[Math.floor(idx/2)].point[idx%2]">
+                                v-model="questionList[Math.floor(idx/2)].point[idx%2]" @click="isDisabledFn">
                             <label :for="option.fraction">
                                 <span>{{ option.description }}</span>
                             </label>
@@ -61,35 +61,45 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper final" v-else v-for="result in resultList" :key="result.category">
+        <div class="wrapper final" v-else>
             <div class="result-top">
                 <div class="final-header">
                     <div class="title">
                         {{ titleCn }}
                         <span class="subtitle">{{ titleEn }}</span>
                     </div>
-                    <ul class="result-list">
-                        <li>
-                            <a href="#" class="active" v-for="i in 5" :key="i">
+                    <ul class="result-list nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation" v-for="(result, idx) in resultList" :key="result.category">
+                            <a :href="`#${result.category}`" :class="{'active': idx===0}" class="nav-link" :id="`${result.category}-tab`" data-toggle="tab" role="tab" :aria-controls="result.category" aria-selected="true">
                                 {{ result.name }}
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="result-content">
-                    <div class="result-title">
-                        {{ result.name }}
-                        <span class="sub-title">{{ result.category }}</span>
-                    </div>
-                    <div class="result-defined">
-                        {{ result.description }}
-                    </div>
-                </div>
             </div>
             <div class="result-bottom">
-                <div class="explain">
-                    <div class="explain-title">{{ result.degree }}</div>
-                    <div class="explain-content">{{ result.explain }}</div>
+                <div id="myTabContent" class="tab-content result-content">
+                    <div class="tab-pane fade show" :class="{'active': idx===0}" :id="result.category" role="tabpanel" v-for="(result, idx) in resultList" :key="result.category" :aria-labelledby="`${result.category}-tab`">
+                        <div class="result-title">
+                            {{ result.name }}
+                            <span class="sub-title">{{ result.category }}</span>
+                        </div>
+                        <div class="result-defined">
+                            {{ result.description }}
+                        </div>
+                        <div class="explain">
+                            <div class="explain-title">{{ result.degree }}</div>
+                            <div class="explain-content">
+                                {{ result.explain }}
+                                <div v-if="result.explain1" class="explain-more">
+                                    <b>高</b>——{{ result.explain1 }}
+                                </div>
+                                <div v-if="result.explain2" class="explain-more">
+                                    <b>低</b>——{{ result.explain2 }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn-zone">
                     <!-- <button class="btn">下一個：外向性<i class="fa fa-arrow-right"></i></button> -->
