@@ -399,9 +399,9 @@
             @media(max-width: 767.98px){
                 height: 45%;
             }
-            // @media(max-width: 479.98px){
-            //     height: 40%;
-            // }
+            @media(max-width: 479.98px){
+                height: 250px;
+            }
             .final-header{
                 .title{
                     display: inline-block;
@@ -501,8 +501,9 @@
             }
             @media(max-width: 479.98px){
                 position: relative;
-                margin-top: 15%;
-                height: auto;
+                margin-top: 60px;
+                // height: 140%;
+                padding-top: calc(140% - 60px);
             }
             .result-content{
                 position: absolute;
@@ -530,9 +531,9 @@
                     right: 30px;
                 }
                 @media(max-width: 479.98px){
-                    position: relative;
+                    position: absolute;
                     height: auto;
-                    top: auto;
+                    top: 0;
                     right: 0;
                     left: 0;
                     padding: 0 15px;
@@ -671,12 +672,12 @@
                     bottom: 30px;
                 }
                 @media(max-width: 479.98px){
-                    position: relative;
+                    // position: relative;
                     right: 0;
                     left: 0;
                     width: calc(100% - 30px);
                     margin: 0 15px;
-                    bottom: auto;
+                    bottom: 0;
                     margin-top: 10px;
                 }
                 .btn{

@@ -549,6 +549,12 @@
   }
 }
 
+@media (max-width: 479.98px) {
+  #app .final .result-top {
+    height: 250px;
+  }
+}
+
 #app .final .result-top .final-header .title {
   display: inline-block;
   margin-top: 24px;
@@ -691,8 +697,8 @@
 @media (max-width: 479.98px) {
   #app .final .result-bottom {
     position: relative;
-    margin-top: 15%;
-    height: auto;
+    margin-top: 60px;
+    padding-top: calc(140% - 60px);
   }
 }
 
@@ -738,9 +744,9 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .result-content {
-    position: relative;
+    position: absolute;
     height: auto;
-    top: auto;
+    top: 0;
     right: 0;
     left: 0;
     padding: 0 15px;
@@ -950,12 +956,11 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .btn-zone {
-    position: relative;
     right: 0;
     left: 0;
     width: calc(100% - 30px);
     margin: 0 15px;
-    bottom: auto;
+    bottom: 0;
     margin-top: 10px;
   }
 }
