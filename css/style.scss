@@ -647,7 +647,7 @@
                         font-size: 18px;
                     }
                     @media(max-width: 479.98px){
-                        height: 180px;
+                        height: 170px;
                         overflow-x: hidden;
                         overflow-y: auto;
                         font-size: 16px;
@@ -677,7 +677,7 @@
                     left: 0;
                     width: calc(100% - 30px);
                     margin: 0 15px;
-                    bottom: 0;
+                    bottom: -10px;
                     margin-top: 10px;
                 }
                 .btn{
