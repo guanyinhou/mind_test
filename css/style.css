@@ -4,7 +4,7 @@
 
 #app .cover {
   background-image: url(../img/photo_01.jpg);
-  position: fixed;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-position: center;
