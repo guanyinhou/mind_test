@@ -538,6 +538,12 @@
   height: 100vh;
 }
 
+@media (max-width: 479.98px) {
+  #app .final {
+    z-index: 1;
+  }
+}
+
 #app .final .result-top {
   top: 0;
   position: absolute;
@@ -558,6 +564,7 @@
   #app .final .result-top {
     height: 41vh;
     position: relative;
+    z-index: 2;
   }
 }
 
@@ -705,6 +712,7 @@
     position: relative;
     margin-top: -195px;
     height: calc(100vh - 60px);
+    z-index: 3;
   }
 }
 

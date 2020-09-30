@@ -390,6 +390,9 @@
         position: relative;
         width: 100vw;
         height: 100vh;
+        @media(max-width: 479.98px){
+            z-index: 1;
+        }
         .result-top{
             top: 0;
             position: absolute;
@@ -405,6 +408,7 @@
                 // height: 250px;
                 height: 41vh;
                 position: relative;
+                z-index: 2;
             }
             .final-header{
                 .title{
@@ -509,6 +513,7 @@
                 // height: 140%;
                 // padding-top: calc(140% - 60px);
                 height: calc(100vh - 60px);
+                z-index: 3;
             }
             .result-content{
                 position: absolute;
