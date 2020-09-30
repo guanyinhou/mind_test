@@ -789,7 +789,6 @@
   #app .final .result-bottom .result-content .result-title {
     font-size: 26px;
     line-height: 40px;
-    margin-top: 10px;
   }
 }
 
@@ -870,7 +869,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .explain {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 }
 
@@ -940,6 +939,9 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .explain .explain-content {
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-size: 16px;
     line-height: 20px;
   }
