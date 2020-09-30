@@ -714,7 +714,7 @@
 @media (max-width: 479.98px) {
   #app .final .result-bottom {
     position: relative;
-    margin-top: -29vh;
+    margin-top: -30vh;
     height: calc(100vh - 60px);
     z-index: 3;
   }
