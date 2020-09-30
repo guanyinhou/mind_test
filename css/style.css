@@ -940,9 +940,6 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .explain .explain-content {
-    height: 170px;
-    overflow-x: hidden;
-    overflow-y: auto;
     font-size: 16px;
     line-height: 20px;
   }
