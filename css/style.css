@@ -533,11 +533,7 @@
 }
 
 #app .final {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
   width: 100vw;
   height: 100vh;
 }
@@ -560,7 +556,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-top {
-    height: 42vh;
+    height: 41vh;
     position: relative;
   }
 }
@@ -706,8 +702,9 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom {
-    top: 60px;
-    height: calc(100vh - 100px);
+    position: relative;
+    margin-top: -195px;
+    height: calc(100vh - 60px);
   }
 }
 

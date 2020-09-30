@@ -387,11 +387,7 @@
         }
     }
     .final{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        position: relative;
         width: 100vw;
         height: 100vh;
         .result-top{
@@ -407,7 +403,7 @@
             }
             @media(max-width: 479.98px){
                 // height: 250px;
-                height: 42vh;
+                height: 41vh;
                 position: relative;
             }
             .final-header{
@@ -508,11 +504,11 @@
                 height: 55%;
             }
             @media(max-width: 479.98px){
-                // position: relative;
-                top: 60px;
+                position: relative;
+                margin-top: -195px;
                 // height: 140%;
                 // padding-top: calc(140% - 60px);
-                height: calc(100vh - 100px);
+                height: calc(100vh - 60px);
             }
             .result-content{
                 position: absolute;
