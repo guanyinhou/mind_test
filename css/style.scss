@@ -407,7 +407,8 @@
             }
             @media(max-width: 479.98px){
                 // height: 250px;
-                height: 37vh;
+                height: 40vh;
+                position: relative;
             }
             .final-header{
                 .title{
@@ -507,8 +508,8 @@
                 height: 55%;
             }
             @media(max-width: 479.98px){
-                position: relative;
-                margin-top: 60px;
+                // position: relative;
+                top: 60px;
                 // height: 140%;
                 // padding-top: calc(140% - 60px);
                 height: calc(100vh - 60px);
