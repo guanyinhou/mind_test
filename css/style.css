@@ -560,7 +560,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-top {
-    height: 40vh;
+    height: 42vh;
     position: relative;
   }
 }
@@ -707,7 +707,7 @@
 @media (max-width: 479.98px) {
   #app .final .result-bottom {
     top: 60px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 100px);
   }
 }
 
