@@ -14,6 +14,7 @@
             left: 0;
             top: 50%;
             background-color: #fff;
+            height: 50vh;
             h1{
                 display: block;
                 margin-top: 96px;
@@ -506,7 +507,7 @@
                 margin-top: 60px;
                 // height: 140%;
                 // padding-top: calc(140% - 60px);
-                height: 85vh;
+                height: calc(100vh - 60px);
             }
             .result-content{
                 position: absolute;
@@ -588,6 +589,7 @@
                     @media(max-width: 479.98px){
                         font-size: 14px;
                         line-height: 22px;
+                        height: auto;
                     }
                 }
             }
@@ -680,7 +682,7 @@
                     left: 0;
                     width: calc(100% - 30px);
                     margin: 0 15px;
-                    bottom: -10px;
+                    bottom: 15px;
                     margin-top: 10px;
                 }
                 .btn{
