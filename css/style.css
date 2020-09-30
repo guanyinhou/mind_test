@@ -568,6 +568,10 @@
   }
 }
 
+#app .final .result-top .final-header {
+  overflow: hidden;
+}
+
 #app .final .result-top .final-header .title {
   display: inline-block;
   margin-top: 24px;
@@ -710,7 +714,7 @@
 @media (max-width: 479.98px) {
   #app .final .result-bottom {
     position: relative;
-    margin-top: -30vh;
+    margin-top: -29vh;
     height: calc(100vh - 60px);
     z-index: 3;
   }

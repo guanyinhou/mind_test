@@ -411,6 +411,7 @@
                 z-index: 2;
             }
             .final-header{
+                overflow: hidden;
                 .title{
                     display: inline-block;
                     margin-top: 24px;
@@ -509,7 +510,7 @@
             }
             @media(max-width: 479.98px){
                 position: relative;
-                margin-top: -30vh;
+                margin-top: -29vh;
                 // height: 140%;
                 // padding-top: calc(140% - 60px);
                 height: calc(100vh - 60px);
