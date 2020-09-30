@@ -21,6 +21,13 @@
   height: 50vh;
 }
 
+@media (max-width: 479.98px) {
+  #app .cover .content {
+    top: 45%;
+    height: 55vh;
+  }
+}
+
 #app .cover .content h1 {
   display: block;
   margin-top: 96px;
@@ -60,7 +67,7 @@
   #app .cover .content h1 {
     width: 320px;
     padding: 30px;
-    top: -85%;
+    top: -70%;
     font-size: 36px;
     line-height: 48px;
   }
