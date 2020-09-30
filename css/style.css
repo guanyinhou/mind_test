@@ -5,8 +5,8 @@
 #app .cover {
   background-image: url(../img/photo_01.jpg);
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-position: center;
 }
 
@@ -530,7 +530,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 #app .final .result-top {
@@ -551,7 +552,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-top {
-    height: 250px;
+    height: 37vh;
   }
 }
 
@@ -699,6 +700,7 @@
     position: relative;
     margin-top: 60px;
     padding-top: calc(140% - 60px);
+    height: 85vh;
   }
 }
 
