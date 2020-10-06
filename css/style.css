@@ -265,8 +265,8 @@
 
 @media (max-width: 479.98px) {
   #app .test-form .quest-zone .question {
-    margin-top: 60px;
-    margin-left: 45px;
+    margin-top: 65px;
+    margin-left: 30px;
     right: 0;
   }
 }
@@ -306,7 +306,7 @@
 
 @media (max-width: 479.98px) {
   #app .test-form .quest-zone .question .big-q {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 
@@ -346,9 +346,9 @@
 @media (max-width: 479.98px) {
   #app .test-form .quest-zone .question p {
     left: 10px;
-    width: calc(100% - 85px);
+    width: calc(100% - 70px);
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -434,8 +434,13 @@
 
 @media (max-width: 479.98px) {
   #app .test-form .select-zone .answers {
-    left: 30px;
-    right: 25px;
+    position: fixed;
+    -webkit-transform: none;
+            transform: none;
+    bottom: 60px;
+    top: calc(25% + 20px);
+    left: 25px;
+    right: 20px;
   }
 }
 
@@ -463,6 +468,7 @@
 @media (max-width: 479.98px) {
   #app .test-form .select-zone .answers .ans {
     font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -472,6 +478,12 @@
   width: 100%;
   margin-bottom: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 479.98px) {
+  #app .test-form .select-zone .answers .ans > span {
+    margin-bottom: 15px;
+  }
 }
 
 #app .test-form .select-zone .answers .ans input {
@@ -488,7 +500,7 @@
   #app .test-form .select-zone .answers .ans input {
     width: 25px;
     height: 25px;
-    margin-top: 3.5px;
+    margin-top: 0;
   }
 }
 
@@ -501,6 +513,13 @@
 @media (max-width: 767.98px) {
   #app .test-form .select-zone .answers .ans label {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 479.98px) {
+  #app .test-form .select-zone .answers .ans label span {
+    line-height: 24px;
+    font-size: 18px;
   }
 }
 
@@ -536,6 +555,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  z-index: 0;
 }
 
 @media (max-width: 479.98px) {
@@ -585,6 +605,9 @@
   font-size: 12px;
   line-height: 18px;
   display: block;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  margin-right: -12px;
 }
 
 @media (max-width: 1399.98px) {
@@ -612,6 +635,8 @@
   #app .final .result-top .final-header .title {
     top: 65px;
     right: 15px;
+    font-size: 14px;
+    text-align: right;
   }
 }
 
@@ -714,8 +739,8 @@
 @media (max-width: 479.98px) {
   #app .final .result-bottom {
     position: relative;
-    margin-top: -30vh;
-    height: calc(100vh - 60px);
+    margin-top: -170px;
+    height: calc(100vh - 65px);
     z-index: 3;
   }
 }
@@ -762,7 +787,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .result-content {
-    position: absolute;
+    position: relative;
     height: auto;
     top: 0;
     right: 0;
@@ -787,8 +812,8 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .result-content .result-title {
-    font-size: 26px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 36px;
   }
 }
 
@@ -801,7 +826,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .result-content .result-title .sub-title {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
   }
 }
@@ -837,7 +862,8 @@
   #app .final .result-bottom .result-content .result-defined {
     font-size: 14px;
     line-height: 22px;
-    height: auto;
+    height: 85px;
+    overflow-y: auto;
   }
 }
 
@@ -869,7 +895,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .explain {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 }
 
@@ -939,7 +965,7 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .explain .explain-content {
-    max-height: 240px;
+    height: 240px;
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 16px;
@@ -974,12 +1000,12 @@
 
 @media (max-width: 479.98px) {
   #app .final .result-bottom .btn-zone {
+    position: relative;
     right: 0;
     left: 0;
     width: calc(100% - 30px);
-    margin: 0 15px;
-    bottom: 15px;
-    margin-top: 10px;
+    margin: 15px;
+    bottom: 0;
   }
 }
 
